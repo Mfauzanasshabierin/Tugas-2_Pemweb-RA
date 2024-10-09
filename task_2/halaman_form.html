@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Formulir Pendaftaran Acara</h1>
+        <form action="halaman_detail.html" method="post">
+            <label for="name">Nama Lengkap :</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan Nama Anda" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="Masukkan Email Anda" required>
+
+            <label for="phone">Nomor Telepon :</label>
+            <input type="tel" id="phone" name="phone" placeholder="Masukkan Nomor Telepon Anda" required>
+
+            <label for="address">Alamat :</label>
+            <input type="text" id="address" name="address" placeholder="Masukkan Alamat Anda" required>
+
+            <label>Jenis Kelamin :</label>
+            <div>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Laki-laki</label>
+            </div>
+            <div>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Perempuan</label>
+            </div>
+            
+
+            <label for="division">Divisi Panitia :</label>
+            <select id="division" name="Kepanitiaan" required>
+                <option disabled selected value="">Pilih Kepanitiaan</option>
+                <optgroup label="Acara">
+                    <option value="manajemen_acara">Manajemen Acara</option>
+                    <option value="time_keeper">Time Keeper</option>
+                    <option value="kreasi">Kreasi</option>
+                </optgroup>
+
+                <optgroup label="Operasional">
+                    <option value="akomodasi">Akomodasi</option>
+                    <option value="logistik">Logistik</option>
+                    <option value="konsumsi">Konsumsi</option>
+                </optgroup>
+
+                <optgroup label="Keamanan">
+                    <option value="system_monitoring">System Monitoring</option>
+                    <option value="database_security">Database Security</option>
+                    <option value="access_control">Access Control</option>
+                    <option value="crowd_control">Crowd Control</option>
+                </optgroup>
+
+                <optgroup label="Hubungan Masyarakat">
+                    <option value="humas">Humas</option>
+                    <option value="pendanaan">Pendanaan</option>
+                </optgroup>
+
+                <optgroup label="Media">
+                    <option value="dokumentasi">Dokumentasi</option>
+                    <option value="desain">Desain</option>
+                </optgroup>
+            </select>
+
+            <label>Bersedia Dipindahkan ke Divisi Lain:</label>
+            <div>
+                <input type="radio" id="transfer_yes" name="transfer" value="yes" required>
+                <label for="transfer_yes">Ya</label><br/>
+            </div>
+            <div>
+                <input type="radio" id="transfer_no" name="transfer" value="no" required>
+                <label for="transfer_no">Tidak</label>
+            </div>
+            
+            <label class="confirmation-label">
+                <input type="checkbox" name="confirmation" required>
+                Saya menyatakan bahwa saya telah mengisi formulir ini dengan benar dan bersungguh-sungguh.
+            </label>
+
+            <input type="submit" value="Daftar">
+        </form>
+    </div>
+</body>
+</html>
